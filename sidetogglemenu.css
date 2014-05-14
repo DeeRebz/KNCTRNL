@@ -1,0 +1,144 @@
+body{ /* CSS for BODY transition when menu is set to push BODY content. */ 
+	-moz-transition: left 100ms ease-in-out, right 100ms ease-in-out;
+	-webkit-transition: left 100ms ease-in-out, right 100ms ease-in-out;
+	transition: left 100ms ease-in-out, right 100ms ease-in-out;
+}
+
+button {
+    position: fixed;
+    
+}
+
+
+.sideviewtoggle {
+    z-index: 1000;
+    width: 4em;
+    height: 4em;
+    background-color: rgba(0,0,0,.1);
+    border: 2px solid white;
+    margin-left: 5px;
+    color: white;
+    outline: none;
+    background-image: url("images/equal-menu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .4;
+}
+
+.sideviewtoggle:hover {
+    opacity: 1;
+    outline: none;
+    /*background-color: rgb(13,0,63);
+	color: rgb(255,255,255);*/
+        
+}
+
+.sideviewtoggle:focus {
+    outline: none;
+}
+
+/*
+.sideviewtoggle-close {
+    z-index: 10001;
+    width: 4em;
+    height: 4em;
+    background-color: rgb(76,0,153);
+    color: white;
+    border: none;
+    
+} */
+
+.sidetogglemenu{ /* shared class for side toggle menus */
+	padding-top: 5em;
+	background-color: rgba(0,0,0,.5);
+	width: 120px; /* default menu width */
+	height: 200px;
+	position: fixed;
+    z-index: 1000;
+	top: -100%;
+	clear: both;
+	display: block;
+	visibility: 'hidden';
+	-moz-transition: all 100ms ease-in-out; /* change 100ms to slide in animation time */
+	-webkit-transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
+}
+
+
+.sidetogglemenu ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+    
+}
+
+.sidetogglemenu a{
+	font: 13px Verdana;
+	padding: 15px 0px 15px 20px;
+    text-align: left;
+	display: block;
+	color: rgb(255,255,255);
+    width: 100px;
+	text-decoration: none;
+	/*border-bottom: 1px solid #C0C0C0;*/
+}
+
+
+.sidetogglemenu a:hover{
+	background-color: rgb(13,0,63);
+	color: rgb(255,255,255);
+}
+
+
+/* #######  Responsive Menu related CSS  ####### */
+
+div#smallscreentoggler{ /* CSS for small screen menus toggler, shown when device width is below specified */
+	width: 1.5em;
+	z-index: 10000;
+	color: white;
+	position: relative;
+	float: right;
+	overflow: hidden;
+	background: gray;
+	font: normal 1.8em Arial;
+	margin-bottom: 0.5em;
+	text-align: center;
+	box-shadow: -3px 3px 5px gray;
+	cursor: pointer;
+	border-radius: 2px;
+	display: none;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+div#smallscreentoggler:hover{
+	background: #eee;
+	color: black;
+	-moz-transition: all 300ms ease-in-out;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+
+@media screen and (max-width: 480px){ /* CSS when device width is 480px or less */
+    .sidetogglemenu{ /* shared class for side toggle menus */
+	padding-top: 5em;
+	background-color: rgba(0,0,0,.5);
+	width: 120px; /* default menu width */
+	height: 200px;
+	position: fixed;
+    z-index: 1000;
+	top: -100%;
+	clear: both;
+	display: block;
+	visibility: 'hidden';
+	-moz-transition: all 100ms ease-in-out; /* change 100ms to slide in animation time */
+	-webkit-transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
+}
+
+    
+    
+}
